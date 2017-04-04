@@ -1,6 +1,8 @@
 \ProvidesClass{friggeri-cv}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
+\special{pdf:docinfo << /Keywords (C, C++, JAVA, Python, Matlab, Simulink, English C2, French C2, Spanish, German A1, Englais C2, Français C2, Espagnol, Allemand A1, automation, TCAS, avionics, aerospace, ekf, kalman filter, CNES, ENAC, ERASMUS, ROS, machine learning, neural networks, electronics, engineering, team, creativity, Unity 3D, C#, Linux, MySQL, control)>>}
+
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
@@ -52,7 +54,7 @@
 
 \newfontfamily\bodyfont[]{Roboto Slab}
 \newfontfamily\thinfont[]{Roboto Slab Thin}
-\newfontfamily\headingfont[]{Arial}
+\newfontfamily\headingfont[]{Arial Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Mapping=tex-text, Color=textcolor]{Arial}
@@ -111,7 +113,6 @@
 }
 
 \renewcommand{\section}[1]{
-  \par\vspace{\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
     \@sectioncolor #1%
@@ -120,7 +121,6 @@
 }
 
 \renewcommand{\subsection}[1]{
-  \par\vspace{.5\parskip}%
   {\Large\headingfont\color{headercolor} #1}
   \par\vspace{.25\parskip}%
 }
